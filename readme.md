@@ -4,7 +4,7 @@
 
 References:
 
-[Get Started with Angular on .NET Core 2.1 (Part One)](https://blog.jeremylikness.com/get-started-with-angular-on-net-core-2-1-part-one-2effcfe8fae9)
+[The Angular .NET Core 2.1 Template (Part Two)](https://blog.jeremylikness.com/the-angular-net-core-2-1-template-part-two-d4db52550764)
 
 
 ## Deploy app
