@@ -2,10 +2,16 @@
 
 ## Create .Net Core Angular app
 
+Using .Net CLI: ```dotnet new angular```
+
+To test: ```dotnet run```
+
+
+
+
 References:
 
 [The Angular .NET Core 2.1 Template (Part Two)](https://blog.jeremylikness.com/the-angular-net-core-2-1-template-part-two-d4db52550764)
-
 
 ## Deploy app
 
