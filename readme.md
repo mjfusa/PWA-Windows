@@ -1,71 +1,29 @@
-# My PWA+Windows (branch webapp)
+# My PWA+Windows (branch addserviceworker)
 
-## 1. Create .Net Core Angular app
+A Service Worker provides fine control over caching of assets providing you with the tools to provide a performant app experience with offline functionality. Additionally, it is in a services worker where you implement the handling of web push notifications via the [Push API]( https://developer.mozilla.org/en-US/docs/Web/API/Push_API). In this section we will implement caching. See the XXXXX branch for implementation of web push notifications.
 
-1. Using .Net CLI:
+## Caching Scenarios
 
-    ```dotnet new angular```
+There are several scenarios to consider when implementing caching. See [The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) for a great overview and when to use each one.
 
-2. Test it:
+At a minimum I'm choosing to implement an offline page to be displayed whenever the user is offline. Also I'll implement pre-caching to start caching assets I know I will need later.
 
-    ```dotnet run```
+## Offline Page
 
-References:
+We'll use the excellent tool [PWA Builder](https://www.pwabuilder.com) to help us create our service worker.
 
-[The Angular .NET Core 2.1 Template (Part Two)](https://blog.jeremylikness.com/the-angular-net-core-2-1-template-part-two-d4db52550764)
+1. Open https://www.pwabuilder.com
+2. In **Provide a URL field** enter your sites url
+3. Click 'Skip to build Service Worker'
 
-## 2. Check in your created app to public GitHub repo. Note URL
+One the left of this page are the various scenarios and on the right top is code to install the service worker **Code for website**, and right bottom is the service worker code.
 
-## 3. Create Azure Web Site (requires Azure subscription)
+We'll us the offline page code. (default selection)
 
-1. [Install Azure CLI 2.0 ](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+4. Create 
 
-2. Create a resource group. For example:
-   
-    ```az group create --location westus --name myResourceGroup```
+Resources:
 
-3. Create Plan (service level / hardware config)
+[Caching files with the Service worker](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker)
 
-    ```az appservice plan create -n <plan name> -g <resource group created above>```
-
-4. Create Web App
-
-    ```az webapp create --name <web app name> --resource-group <resource group name>  --plan <plan name>```
-
-## 4. Associate your GitHub repo with newly created web app
-
-1. Configure in Azure portal
-
-2. In the left menu, click Deployment Center > GitHub > Authorize. Follow the authorization prompts. 
-
-## 5. Deploy Github source to web app, build and start
-
-1. From Azure CLI
-    
-   ```az webapp deployment source config -n <web app name> -g <resource group name> --repo-url <git hub url> --branch <repo branch> --repository-type github```
-
-2. Test it! Access your deployed web site.
-
-## Pause and Reflect
-
-We now have our source code checked in, deployed and set up for CI/CD. Nice! High Five! Now let see what we need to do to make this a PWA.
-
-
-References:
-
-[Deploy continuously from GitHub](https://docs.microsoft.com/en-us/azure/app-service/app-service-continuous-deployment)
-
-Note: This step took 25 minutes(!) on first run. Time to walk around the building.
-
-[Visual Studio Code and Azure App Service - a perfect fit](https://azure.microsoft.com/en-us/blog/visual-studio-code-and-azure-app-service-a-perfect-fit/)
-
-## Analyze app for PWA Gaps Using Chrome Lighthouse PWA Audit
-
-## Add Web Manifest
-
-## Add Service Worker
-
-## Add Windows 10 Background Tasks
-
-## Add Windows 10 Toast and Tile Updates
-
+[The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/)
