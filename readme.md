@@ -46,7 +46,7 @@ References:
 
 2. Test it! Access your deployed web site.
 
-# Pause and Reflect
+## Pause and Reflect
 
 We now have our source code checked in, deployed and set up for CI/CD. Nice! High Five! Now let see what we need to do to make this a PWA.
 
