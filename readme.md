@@ -18,4 +18,14 @@ Your report should look something like:
 
 ![audit results](https://github.com/mjfusa/PWA-Windows/blob/pwagaps/docs/chrome_2018-09-21_10-29-24.png)
 
+## 2. The good news - passed audits
+
+|*Passed audits*|5 audits|
+
+|1|Page load is fast enough on 3G|
+|2|Uses HTTPS|
+|3|Redirects HTTP traffic to HTTPS|
+|4|Has a <meta name="viewport"> tag with width or initial-scale|
+|5|Contains some content when JavaScript is not available|
+
 
