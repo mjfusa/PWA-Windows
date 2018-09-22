@@ -18,9 +18,33 @@ We'll use the excellent tool [PWA Builder](https://www.pwabuilder.com) to help u
 
 One the left of this page are the various scenarios and on the right top is code to install the service worker **Code for website**, and right bottom is the service worker code.
 
-We'll us the offline page code. (default selection)
+We'll use the offline page code. (default selection)
 
-4. Create 
+4. Add Service Worker to app
+    
+    1. Add the installation code to the app. This will run when the ```index.html``` page is loaded and register the service worker.
+    2. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw-register.js` to `ClientApp/src/assets`
+
+    Tip: Use `wget.ps1` in Scripts folder to copy from the http location to your hard drive.
+
+    3. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src/assets`
+
+    4. Update `ClientApp\src\index.html` `<body>` as follows:
+
+    ```HTML
+    <body>
+    <app-root>Loading...</app-root>
+    <script src="assets/pwabuilder-sw-register.js"/>
+    </body>
+    ```
+5. Test It
+
+    1. Like in branch `webapp` build and start the web app:
+
+    `dotnet run'
+
+6. Debug It
+
 
 Resources:
 
