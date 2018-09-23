@@ -48,6 +48,7 @@ We'll use the offline page code. (default selection)
 Note: The service worker will only intercept requests from clients under the service worker's scope. The max scope for a service worker is the location of the worker. We want to catch the requests for the whole site, therefore we'll place the service worker in the root. As this is an Angular project, we need to update .angular.json to get these included in the site.
 
  ```json
+ . . .
  "apps": [
     {
       "root": "src",
@@ -58,6 +59,7 @@ Note: The service worker will only intercept requests from clients under the ser
         "pwabuilder-sw.js",
         "offline.html"
        ],
+       . . .
  ```
 
 
