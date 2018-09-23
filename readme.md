@@ -44,6 +44,10 @@ References:
     
    ```az webapp deployment source config -n <web app name> -g <resource group name> --repo-url <git hub url> --branch <repo branch> --repository-type github```
 
+    To sync code as you go:
+    ```az webapp deployment source sync -n <web app name> -g <resource group name>```
+
+
 2. Test it! Access your deployed web site.
 
 ## Pause and Reflect
