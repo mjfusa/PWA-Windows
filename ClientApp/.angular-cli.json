@@ -8,8 +8,11 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets"
-      ],
+        "assets",
+        "pwabuilder-sw-register.js",
+        "pwabuilder-sw.js",
+        "offline.html"
+       ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -22,7 +25,7 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css"
       ],
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
+	    "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"

@@ -23,21 +23,50 @@ We'll use the offline page code. (default selection)
 4. Add Service Worker to app
     
     1. Add the installation code to the app. This will run when the ```index.html``` page is loaded and register the service worker.
-    2. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw-register.js` to `ClientApp/src/assets`
+    2. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw-register.js` to `ClientApp/src`
 
     Tip: Use `wget.ps1` in Scripts folder to copy from the http location to your hard drive.
 
-    3. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src/assets`
+    3. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src`
 
     4. Update `ClientApp\src\index.html` `<body>` as follows:
 
     ```HTML
     <body>
     <app-root>Loading...</app-root>
-    <script src="assets/pwabuilder-sw-register.js"/>
+    <script src="pwabuilder-sw-register.js"/>
     </body>
     ```
+    5. Create `offline.html' and include it in the root.
+
+    ```HTML
+    <body>
+    The application if offline. Please check your internet connection.
+    <body>
+    ```
+
+Note: The service worker will only intercept requests from clients under the service worker's scope. The max scope for a service worker is the location of the worker. We want to catch the requests for the whole site, therefore we'll place the service worker in the root. As this is an Angular project, we need to update .angular.json to get these included in the site.
+
+ ```json
+ "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "pwabuilder-sw-register.js",
+        "pwabuilder-sw.js",
+        "offline.html"
+       ],
+ ```
+
+
 5. Test It
+
+    1. Configure Chrome to localhost without valid SSL certificate:
+
+    `chrome://flags/#allow-insecure-localhost`  
+
 
     1. Like in branch `webapp` build and start the web app:
 
