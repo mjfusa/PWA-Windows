@@ -23,13 +23,14 @@ We'll use the offline page code. (default selection)
 4. Add Service Worker to app
     
     1. Add the installation code to the app. This will run when the ```index.html``` page is loaded and register the service worker.
+     
     2. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw-register.js` to `ClientApp/src`
 
     Tip: Use `wget.ps1` in Scripts folder to copy from the http location to your hard drive.
 
-    3. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src`
+    1. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src`
 
-    4. Update `ClientApp\src\index.html` `<body>` as follows:
+    2. Update `ClientApp\src\index.html` `<body>` as follows:
 
     ```HTML
     <body>
@@ -37,7 +38,7 @@ We'll use the offline page code. (default selection)
     <script src="pwabuilder-sw-register.js"/>
     </body>
     ```
-    5. Create `offline.html' and include it in the root.
+    3. Create `offline.html' and include it in the root.
 
     ```HTML
     <body>
@@ -59,22 +60,22 @@ Note: The service worker will only intercept requests from clients under the ser
         "pwabuilder-sw.js",
         "offline.html"
        ],
-       . . .
+. . .
  ```
-
 
 5. Test It
 
-    1. Configure Chrome to localhost without valid SSL certificate:
+    1. Configure Kestrel to use dev certificate created when app was created:
+    
+        `dotnet dev-certs https --trust`
 
-    `chrome://flags/#allow-insecure-localhost`  
+    2. Build and start the web app:
 
-
-    1. Like in branch `webapp` build and start the web app:
-
-    `dotnet run'
+        `dotnet run`
 
 6. Debug It
+
+    1. App should be running in Edge
 
 
 Resources:
