@@ -6,7 +6,7 @@ A Service Worker provides fine control over caching of assets providing you with
 
 There are several scenarios to consider when implementing caching. See [The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) for a great overview and when to use each one.
 
-At a minimum I'm choosing to implement an offline page to be displayed whenever the user is offline. Also I'll implement pre-caching to start caching assets I know I will need later.
+At a minimum we'll implement an offline page to be displayed whenever the user is offline. Also we'll implement pre-caching to start caching assets I know I will need later.
 
 ## Offline Page
 
