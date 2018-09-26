@@ -2,21 +2,36 @@
 
 ## 1. Create .Net Core Angular app
 
-1. Using .Net CLI:
+1. Create a folder for your project;
+   
+    `md \mywindowspwa`
+    
+    `cd \mywindowspwa`
+
+2. Using .Net CLI:
 
     ```dotnet new angular```
 
-2. Test it:
+3. Test it:
 
     ```dotnet run```
+
+4. Open Visual Studio Code. Install the [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) if you haven; already have it. 
+5. In Visual Studio Code, open the project folder.
+6. At the prompt, have the exention create the necessary support files for you. This will help you debug the app.
+
+
+
+
+
 
 References:
 
 [The Angular .NET Core 2.1 Template (Part Two)](https://blog.jeremylikness.com/the-angular-net-core-2-1-template-part-two-d4db52550764)
 
-## 2. Check in your created app to public GitHub repo. Note URL
+## 2. (Optional) Check in your created app to public GitHub repo. Note URL
 
-## 3. Create Azure Web Site (requires Azure subscription)
+## 3. (Optional) Create Azure Web Site (requires Azure subscription)
 
 1. [Install Azure CLI 2.0 ](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
@@ -32,13 +47,13 @@ References:
 
     ```az webapp create --name <web app name> --resource-group <resource group name>  --plan <plan name>```
 
-## 4. Associate your GitHub repo with newly created web app
+## 4. (Optional) Associate your GitHub repo with newly created web app
 
 1. Configure in Azure portal
 
 2. In the left menu, click Deployment Center > GitHub > Authorize. Follow the authorization prompts. 
 
-## 5. Deploy Github source to web app, build and start
+## 5. (Optional) Deploy Github source to web app, build and start
 
 1. From Azure CLI
     
