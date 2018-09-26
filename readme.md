@@ -3,6 +3,7 @@
 Branch|Description
 ---|---
 webapp|Web App
+pwagaps|Analyze app for PWA Gaps
 addserviceworker|Service Worker
 addwebmanifest|Web Manifest
 localbackgroundtoast|Local Background Toast
