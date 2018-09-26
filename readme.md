@@ -78,13 +78,3 @@ Note: This step took 25 minutes(!) on first run. Time to walk around the buildin
 
 [Visual Studio Code and Azure App Service - a perfect fit](https://azure.microsoft.com/en-us/blog/visual-studio-code-and-azure-app-service-a-perfect-fit/)
 
-## Analyze app for PWA Gaps Using Chrome Lighthouse PWA Audit
-
-## Add Web Manifest
-
-## Add Service Worker
-
-## Add Windows 10 Background Tasks
-
-## Add Windows 10 Toast and Tile Updates
-
