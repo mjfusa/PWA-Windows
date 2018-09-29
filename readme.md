@@ -19,6 +19,12 @@ Prerequisites
     
 -   Node.js. Install from
     [here](https://nodejs.org/)
+    
+-   Visual Studio Code. Install from
+    [here](https://code.visualstudio.com)
+    
+-   Visual Studio Code C# Extension. Install from
+    [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 Create .Net Core Angular app
 ----------------------------
