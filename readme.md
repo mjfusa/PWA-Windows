@@ -37,7 +37,7 @@ Install the development cert, created during app creation, into the local user
 certificate store. This will allow web browsers to treat <http://localhost> as
 trusted. run the following command:
 
--   `dotnet dev-certs https –trust`
+-   `dotnet dev-certs https –-trust`
 
 Test it 
 --------
