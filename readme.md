@@ -4,7 +4,7 @@ This tutorial will walk you through adding the necessary code to convert an Angu
 
 We'll take a step by step approach, creating the web app, using tools to check its' compliance with PWA standards, and then adding the neccesary code to close those gaps. Finally we'll add support for a few Windows 10 features - adding value to the app when it runs on Windows 10.
 
-Here are the modules covered. Use Git to 
+Here are the modules covered. Use Git to a
 
 ## Create .Net Core Angular app
 
