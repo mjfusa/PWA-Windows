@@ -16,6 +16,9 @@ Prerequisites
 
 -   .NET SDK. Install from
     [here](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial).
+    
+-   Node.js. Install from
+    [here](https://nodejs.org/)
 
 Create .Net Core Angular app
 ----------------------------
