@@ -29,9 +29,9 @@ Create .Net Core Angular app
 
 1.  Create a folder for your project:
 
->   md \\mywindowspwa
+>   `md \\mywindowspwa`
 
->   cd \\mywindowspwa
+>   `cd \\mywindowspwa`
 
 2. Open folder in Visual Studio Code:
 
@@ -41,7 +41,9 @@ Create .Net Core Angular app
 
 -   In Visual Studio Code, Open a new terminal (Powershell or cmd) and enter the follow commands:
 
--   `dotnet new angular`
+>   `dotnet new angular`
+
+Note: Visual Studio Explorer populated with project files.
 
 Install development certificate
 -------------------------------
@@ -50,21 +52,21 @@ Install the development cert, created during app creation, into the local user
 certificate store. This will allow web browsers to treat <http://localhost> as
 trusted. run the following command:
 
--   `dotnet dev-certs https --trust`
+>   `dotnet dev-certs https --trust`
 
 Test it 
 --------
 
 1. Run the following command:
 
--   `dotnet run`
+>   `dotnet run`
 
 Note: You will see the app build and then start <http://localhost:port> in your
 default web browser. The output should look something like this:
 
 \<screenshot\>
 
-1.  CTRL-Break to stop Kestrel (Microsoft local web server)
+2.  CTRL-Break to stop Kestrel (Microsoft local web server)
 
 Debug It
 --------
@@ -74,26 +76,21 @@ Edge DevTools
 Preview](https://www.microsoft.com/en-us/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj#activetab=pivot:overviewtab)
 to debug the Angular typescript.
 
-1.  Open Visual Studio Code. Install the [C\#
-    Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
-    if you haven’t already.
+1.  You should be in Visual Studio Code and the C# extension should be installed. (See prerequisites.)
 
 2.  In Visual Studio Code, open the project folder.
 
-3.  At the prompt, have the extension create the necessary support files for
-    you. This will help you debug the app.
-
-4.  Click on the Explorer Tab.
+3.  Click on the Explorer Tab.
 
     1.  Open Program.cs
 
     2.  Place a breakpoint in CreateWebHostBuilder().
 
-5.  Click on the Debug Tab. In the Debug Drop down select:
+4.  Click on the Debug Tab. In the Debug Drop down select:
 
 >   `.NET Core Launch (Web)`
 
->   Click the green arrow to start the debugger.
+>   Press F5 to build the app and run it under the debugger.
 
 >   Note in the output window the progress of the build and web app launch.
 
@@ -134,6 +131,8 @@ Pause and Reflect
 
 You have created, built and run a ASP.NET Core Angular app. You have also
 debugged the C\# and TypeScript code. High Five!
+
+This tutorial does not require you deploy the website - all exercised can be done with `https://localhost`. See the steps below of you wish to deploy the web site.
 
 (Optional) Check in your created app to public GitHub repo. Note URL
 --------------------------------------------------------------------
