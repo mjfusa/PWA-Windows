@@ -3,9 +3,7 @@ My PWA+Windows (branch webapp)
 
 In this module you will:
 
--   Create a .NET Core Angular app using the .NET Core CLI
-
--   Open the app in Visual Studio Code
+-   Create a .NET Core Angular app using the .NET Core CLI in Visual Studio Code
 
 -   Debug the app in Visual Studio Code
 
@@ -35,7 +33,13 @@ Create .Net Core Angular app
 
 >   cd \\mywindowspwa
 
-1.  Create ASP.NET Core Angular app, using .NET CLI:
+2. Open folder in Visual Studio Code:
+
+>   `code .`
+
+3.  Create ASP.NET Core Angular app, using .NET CLI:
+
+-   In Visual Studio Code, Open a new terminal (Powershell or cmd) and enter the follow commands:
 
 -   `dotnet new angular`
 
