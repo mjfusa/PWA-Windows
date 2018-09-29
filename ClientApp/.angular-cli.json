@@ -9,6 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "service-worker.js",
+        "service-worker-registration.js",
         "pwabuilder-sw-register.js",
         "pwabuilder-sw.js",
         "offline.html"

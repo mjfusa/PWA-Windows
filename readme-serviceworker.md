@@ -24,20 +24,18 @@ We'll use the offline page code. (default selection)
     
     1. Add the installation code to the app. This will run when the ```index.html``` page is loaded and register the service worker.
      
-    2. Copy `https://raw.githubusercontent.com/GoogleChromeLabs/sw-precache/master/demo/app/js/service-worker-registration.js` to `ClientApp/src`
+    2. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw-register.js` to `ClientApp/src`
 
     Tip: Use `wget.ps1` in Scripts folder to copy from the http location to your hard drive.
 
     1. Copy `https://raw.githubusercontent.com/pwa-builder/serviceworkers/master/serviceWorker1/pwabuilder-sw.js` to  `ClientApp/src`
 
-    2. In service-worker-registration.js, change `service-worker.js` to 'pwabuilder-sw.js'
-    
     2. Update `ClientApp\src\index.html` `<body>` as follows:
 
     ```HTML
     <body>
     <app-root>Loading...</app-root>
-    <script src="service-worker-registration.js"/>
+    <script src="pwabuilder-sw-register.js"/>
     </body>
     ```
     3. Create `offline.html' and include it in the root.
@@ -58,42 +56,26 @@ Note: The service worker will only intercept requests from clients under the ser
       "outDir": "dist",
       "assets": [
         "assets",
-        "service-worker-registration.js",
+        "pwabuilder-sw-register.js",
         "pwabuilder-sw.js",
         "offline.html"
        ],
 . . .
  ```
-5. Add Chrome launch to debug menu
-    1. Add the following to `launch.json`:
-    ```json
-    {
-        "name": "Launch Chrome",
-        "type": "chrome",
-        "request": "launch",
-        "sourceMaps": true,
-        "url": "https://localhost:5001",
-        "webRoot": "${workspaceFolder}/ClientApp",
-        "runtimeArgs": [
-            "--remote-debugging-port=9222"
-        ]
-    },
-    ```
 
-6. Debug the Service worker
+5. Test It
 
-    1. Select `.NET Core Launch (web)` from DEBUG side bar and press `CTRL-F5` to start web app without debugging
-    2. Select `Launch Chrome` from DEBUG side bar and press F5 to launch the site in Chrome.
-    3. Press F12 to start the developer tools.
-    4. Click on the `Application` tab. You should see the following:
-    <screen shot chrome-serviceworker-debug.png>
-    5. Status should be `activated and is running`.
-    6. Open the service worker by clicking on the __service-worker.js__ link.
-
+    1. Configure Kestrel to use dev certificate created when app was created:
     
+        `dotnet dev-certs https --trust`
 
+    2. Build and start the web app:
 
+        `dotnet run`
 
+6. Debug It
+
+    1. App should be running in Edge
 
 
 Resources:

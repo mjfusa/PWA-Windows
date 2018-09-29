@@ -38,23 +38,14 @@
             }
         },
         {
-
             "name": "Launch Chrome",
-
             "type": "chrome",
-
             "request": "launch",
-
             "sourceMaps": true,
-
             "url": "https://localhost:5001",
-
             "webRoot": "${workspaceFolder}/ClientApp",
-
             "runtimeArgs": [
-
                 "--remote-debugging-port=9222"
-
             ]
         },
         {
