@@ -64,7 +64,7 @@ Test it
 Note: You will see the app build and then start <https://localhost:port> in your
 default web browser. The output should look something like this:
 
-\<screenshot\>
+![running app](./ApplicationFrameHost_2018-10-01_15-12-03.png)
 
 2.  CTRL-Break to stop Kestrel (Microsoft local web server)
 
@@ -116,7 +116,7 @@ Note: The debugger stops at the breakpoint.
 
 >   Note: The breakpoint is hit in the debugger.
 
->   \<edge-debugger.png\>
+![edge debugger](./edge-debugger.png)
 
 References:
 
@@ -147,11 +147,11 @@ This tutorial does not require you deploy the website - all exercised can be don
 
 -   `az group create --location westus --name myResourceGroup`
 
-1.  Create Plan (service level / hardware config)
+3.  Create Plan (service level / hardware config)
 
 -   `az appservice plan create -n <plan name> -g <resource group created above>`
 
-1.  Create Web App
+4.  Create Web App
 
 -   `az webapp create --name <web app name> --resource-group <resource group
     name>  --plan <plan name>`
