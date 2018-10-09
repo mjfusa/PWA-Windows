@@ -6,6 +6,26 @@ The lack of a web manifest was noted when we did the PWA audit. In this module w
 
 ## Creating a Web App Manifest
 
+Create the file `ClientApp\src\manifest.json' and paste in the following boilerplate:
+
+>```json
+>{
+>    "dir": "ltr",
+>    "lang": "en-us",
+>    "name": "My PWA and Windows",
+>    "scope": "/",
+>    "display": "browser",
+>    "start_url": "https://localhost:5001",
+>    "short_name": "PWAWindows",
+>    "theme_color": "transparent",
+>    "description": "My sample PWA with Windows extensions",
+>    "orientation": "any",
+>    "background_color": "transparent",
+>    "related_applications": [],
+>    "prefer_related_applications": false,
+>    "icons": []
+>}
+>```
 
 
 References:

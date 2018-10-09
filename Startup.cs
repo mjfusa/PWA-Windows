@@ -42,7 +42,7 @@ namespace MyPWA_Windows
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection(); todo disable force to https
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

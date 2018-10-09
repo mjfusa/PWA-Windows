@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "manifest.json",
         "service-worker.js",
         "service-worker-registration.js",
         "pwabuilder-sw-register.js",
